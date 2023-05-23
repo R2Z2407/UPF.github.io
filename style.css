@@ -7,8 +7,8 @@
 
 body{
     height: 100vh;
-    background-color: #525252;
-    background-image: url(BG.png);
+    background-image: url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4c9617a1e1d8fb4d/6379fa48b506a15c10d2871c/AFF_Squad_Indonesia.jpg);
+    box-shadow: rgba(0, 0, 0, 0.427);
     background-size: cover;
     background-position: center;
 }
@@ -23,19 +23,32 @@ a{
     font-size: 1.2rem;
 }
 
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.164); /* Black background with opacity */
+  }
+
 a:hover{
     color: red;
 }
 /* HEADER */
 header {
     position: relative;
+   
     padding: 0 4rem;
 }
+
 .navbar {
     width: 100%;
-    height: 60px;
+    height: 90px;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,6 +95,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*HERO*/
+section#hero{
+    margin: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    color: white;   
+}
+
+#hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
 }
 /* RESPONSIVE DESIGN*/
 @media (max-width: 992px) {
