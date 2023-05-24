@@ -6,9 +6,9 @@
 }
 
 body{
-    height: 100vh;
+    height: 109vh;
     background-image: url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4c9617a1e1d8fb4d/6379fa48b506a15c10d2871c/AFF_Squad_Indonesia.jpg);
-    box-shadow: rgba(0, 0, 0, 0.427);
+    box-shadow: rgba(0, 0, 0, 0.625);
     background-size: cover;
     background-position: center;
 }
@@ -19,28 +19,20 @@ li{
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.2rem;
 }
 
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.247); /* Black background with opacity */
-  }
-
-a:hover{
+.navbar .links a:hover{
     color: red;
+    background: black;
+    padding: 10px;
+    border-radius: 30px;
 }
 /* HEADER */
 header {
-    position: relative;
-   
+    height: 40vh;
+    position: relative; 
     padding: 0 4rem;
 }
 
@@ -61,13 +53,21 @@ header {
     padding-bottom: 2rem;
 }
 
+.navbar .Logo a:hover {
+    color: red;
+}
+
 .navbar .links {
     display: flex;
     gap: 3rem;
 }
 
+.dropdown_menu a:hover {
+    color: white;
+}
+
 .navbar .toggle_button{
-    color: #fff;
+    color: black;
     font-size: 1.7rem;
     cursor: pointer;
     display: none;
@@ -80,8 +80,8 @@ header {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(232, 4, 4, 0.31);
-    backdrop-filter: blur(100px);
+    background: rgba(238, 4, 4, 0.652);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -97,12 +97,10 @@ header {
     justify-content: center;
 }
 /*HERO*/
-section#hero{
-    margin: 200px;
+main{
+    height: 65.1vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-self: center;
     text-align: center;
     color: white;   
 }
@@ -111,8 +109,35 @@ section#hero{
     font-size: 2.5rem;
     margin-bottom: 0.6rem;
 }
+
+/*FOOTER*/
+footer {
+    background: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align:justify;
+    align-items: center;
+    padding: 10px auto;
+    gap: 3rem;
+}
+footer a{
+    color: red;
+}
+footer a:hover{
+    color: white;
+}
+
 /* RESPONSIVE DESIGN*/
 @media (max-width: 992px) {
+    body{
+        height: 109vh;
+    }
+
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
     .navbar .links
     {display: none;}
     .navbar .toggle_button{
@@ -120,11 +145,5 @@ section#hero{
     }
     .dropdown_menu{
         display: block;
-    }
-}
-@media (max-width: 992px) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
     }
 }
