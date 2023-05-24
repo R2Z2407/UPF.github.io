@@ -13,36 +13,62 @@
         <title>HOME</title>
     </head>
     <body>
-        <div id="overlay"></div>
         <header>
             <!--Navigation Bar-->
-        <div class="navbar">
-            <div class="Logo" style="text-align:center;"><a href="hero">U P D A T
-                    E&nbsp&nbsp&nbspI N D O N E S I A<br>F O O T B A L L</a></div>
-            <ul class="links">
+            <div class="navbar">
+                <div class="Logo" style="text-align:center;"><a href="#hero">U P
+                        D A T
+                        E&nbsp&nbsp&nbspI N D O N E S I A<br>F O O T B A L L</a></div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="toggle_button">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown_menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About</a></li>
-            </ul>
-            <div class="toggle_button">
-                <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
-        <div class="dropdown_menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About</a></li>
-        </div>
-        <!--Header-->
+            <!--Header-->
+        </header>
         <main>
             <section id="hero">
                 <h1>Selamat Datang</h1>
                 <p>
-                    Kami akan selalu update berita tentang perkembangan sepakbola tanah air
+                    Kami akan selalu update berita tentang perkembangan
+                    sepakbola tanah air
                     <br>mulai dari ranah liga hingga tim nasional.
                 </p>
             </section>
         </main>
-    </header>   
+        <!--Social Media-->
+        <footer>
+            <div>
+                <a href="https://www.instagram.com"><img src="IG.png">INSTAGRAM</a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com"><img src="IG.png">TWITTER</a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com"><img src="IG.png">YOUTUBE</a>
+            </div>
+        </footer>
+        <script>
+        const toggleButton = document.querySelector('.toggle_button');
+        const toggleButtonicon = document.querySelector('.toggle_button i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+        toggleButton.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+            
+            toggleButtonicon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        };
+    </script>
     </body>
 </html>
